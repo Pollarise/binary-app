@@ -1,0 +1,17 @@
+import React from 'react';
+import { StyleSheet, Text } from 'react-native';
+
+export function Heading({ children, style, ...props }) {
+  return (
+    <Text {...props} style={[styles.text, style]}>
+      {children.toUpperCase()}
+    </Text>
+  );
+}
+
+const styles = StyleSheet.create({
+  text: {
+    fontWeight: 'bold',
+    fontSize: 24,
+  },
+});
